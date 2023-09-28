@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jakes Makes - Your Creative Solutions</title>
+  <style>
+    /* CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .service {
+      margin-bottom: 30px;
+    }
+
+    .service h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .service p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .service button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to Jakes Makes</h1>
+  </header>
+
+  <div class="container">
+    <div class="service">
+      <h2>Balloon Twisting</h2>
+      <p>Experience the joy of balloon twisting with our talented artists. We create amazing balloon sculptures and designs for all occasions.</p>
+      <button onclick="redirectToPage2()">Book Now</button>
+    </div>
+
+    <div class="service">
+      <h2>Video Editing</h2>
+      <p>Elevate your video content with our professional video editing services. We bring your vision to life through seamless editing and post-production.</p>
+      <button onclick="redirectToPage2()">Book Now</button>
+    </div>
+
+    <div class="service">
+      <h2>Coding</h2>
+      <p>Unlock the potential of technology with our coding services. We develop custom codes for your specific needs and personalization.</p>
+      <button onclick="redirectToPage2()">Book Now</button>
+    </div>
+
+    <!-- Embedded HTML -->
+    <div class="service">
+      <h2>Email us for inquiries</h2>
+      <p>Email: jakesmakes@gmail.com</p>
+      <button onclick="copyEmail()">OK</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Jakes Makes. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript functions
+    function redirectToPage2() {
+      window.location.href = "mailto:epicoolegitaco@gmail.com";
+    }
+
+    function copyEmail() {
+      const email = 'epicoolegitaco@gmail.com';
+
+      // Copy email to clipboard
+      navigator.clipboard.writeText(email).then(function() {
+        console.log('Email copied to clipboard');
+      }, function() {
+        console.error('Failed to copy email to clipboard');
+      });
+
+      // Wait for 5 seconds before redirecting
+      setTimeout(function() {
+        window.location.href = 'https://mail.google.com';
+      }, 5000);
+    }
+  </script>
+</body>
+
+</html>
